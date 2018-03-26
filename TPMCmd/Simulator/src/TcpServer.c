@@ -42,12 +42,8 @@
 
 #include <stdio.h>
 
-#ifdef _MSC_VER
 #include <windows.h>
 #include <winsock.h>
-#else
-typedef int SOCKET
-#endif
 
 
 #include <string.h>

@@ -14,5 +14,6 @@ if [ ! -f Makefile ]; then
 fi
 make -j5
 
+cp -r include ../
 cp crypto/bn/bn_lcl.h ../include/openssl/bn_lcl.h
 cp -r crypto/include/internal ../include/openssl/

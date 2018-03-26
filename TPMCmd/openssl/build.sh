@@ -5,12 +5,10 @@ cd $(dirname $0)
 mkdir -p include/openssl/internal
 if [ ! -d src/.git ]; then
     rm -rf src
-    git clone https://github.com/openssl/openssl.git src
+    git clone --branch OpenSSL_1_1_0g --depth 1 https://github.com/openssl/openssl.git src
 fi
 
 cd src
-git checkout OpenSSL_1_1_0g
-
 if [ ! -f Makefile ]; then
     ./config
 fi
